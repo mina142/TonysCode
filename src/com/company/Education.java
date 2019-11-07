@@ -34,10 +34,9 @@ public class Education {
     public void setGradYear(String gradYear) { this.gradYear = gradYear; }
 
     public void printInfo1(){
-        System.out.println(getDegreeType());
-        System.out.println(getMajor());
-        System.out.println(getUniversityName());
-        System.out.println(getGradYear());
+        System.out.println(getDegreeType() + ", " + getMajor() );
+
+        System.out.println(getUniversityName() + ", " + getGradYear());
     }
     //method to display this text
 }

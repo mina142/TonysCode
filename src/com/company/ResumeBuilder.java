@@ -76,7 +76,8 @@ public class ResumeBuilder {
 
         while (true) {
             Experience experience = new Experience();
-            System.out.println("Please enter your prior work experience:");
+            System.out.println("Please enter your prior work experience");
+            System.out.println("Company name: ");
             company = key.nextLine();
             experience.setCompany(company);
 
@@ -140,13 +141,13 @@ public class ResumeBuilder {
 
         System.out.println();
         for (Experience experience : experience1) {/// this is where you need to check and fix
-            System.out.println("Experience: ");
+            System.out.println("Work Experience: ");
             experience.printText2(); // check this experience1 issue
         }
 
         System.out.println();
         for(Skills skill : skills1){
-            System.out.println("Skills: ");
+            System.out.println("Applicable Skills: ");
             skill.printText3();
                 }
 

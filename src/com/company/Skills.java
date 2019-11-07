@@ -22,8 +22,8 @@ public class Skills {
     public void setSkillRating(String skillRating) { this.skillRating = skillRating; }
 
     public void printText3(){
-        System.out.println(getSkillName());
-        System.out.println(getSkillRating());
+        System.out.println("Skill: " + getSkillName() +"\t" + "Rating: " + getSkillRating());
+
     }
     // method to display this text
 }

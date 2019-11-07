@@ -42,9 +42,8 @@ public class Experience {
     public void printText2(){
         System.out.println(getCompany());
         System.out.println(getJobTitle());
-        System.out.println(getStartDate());
-        System.out.println(getEndDate());
-        System.out.println(getJobDescription());
+        System.out.println("Duration: " + getStartDate() + " - " + getEndDate());
+        System.out.println("Job Description: " + getJobDescription());
 
     }
     //method to display this text
