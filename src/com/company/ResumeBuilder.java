@@ -12,8 +12,6 @@ public class ResumeBuilder {
 
         // for inputing the exit message
         String input;
-        //String input2;
-        //String input3;
 
         String degreeType;
         String major;
@@ -31,9 +29,9 @@ public class ResumeBuilder {
 
         Scanner key = new Scanner(System.in);
 
-        ArrayList<Education> education1 = new ArrayList<>();
-        ArrayList<Experience> experience1 = new ArrayList<>();
-        ArrayList<Skills> skills1 = new ArrayList(); // check with line 103
+        ArrayList<Education> educationInfo = new ArrayList<>();
+        ArrayList<Experience> experienceInfo = new ArrayList<>();
+        ArrayList<Skills> skillsInfo = new ArrayList(); // check with line 103
 
         Applicant applicant = new Applicant();
         System.out.println("Welcome to our online application, please fill out the following information to be considered.");
@@ -63,7 +61,7 @@ public class ResumeBuilder {
             gradYear = key.nextLine();
             education.setGradYear(gradYear);
 
-            education1.add(education);
+            educationInfo.add(education); //
 
             System.out.println("Before we move on, do you want to add any more educational experience?");
             System.out.println("Please type Yes or No");
@@ -97,7 +95,7 @@ public class ResumeBuilder {
             jobDescription = key.nextLine();
             experience.setJobDescription(jobDescription);
 
-            experience1.add(experience);
+            experienceInfo.add(experience);
 
             System.out.println("Before we move on, do you want to add any more prior work experience?");
             System.out.println("Please type Yes or No");
@@ -118,7 +116,7 @@ public class ResumeBuilder {
                 skillRating = key.nextLine();
                 skill2.setSkillRating(skillRating);
 
-                skills1.add(skill2);
+                skillsInfo.add(skill2);
 
                 System.out.println("Before we move on, do you want to add any more relevant skills?");
                 System.out.println("Please type Yes or No");
@@ -133,21 +131,21 @@ public class ResumeBuilder {
 
         applicant.printInfo();
         System.out.println();
-        for (Education education : education1) {
+        for (Education education : educationInfo) { //
             System.out.println("Education:");
             education.printInfo1();
 
         }
 
         System.out.println();
-        for (Experience experience : experience1) {/// this is where you need to check and fix
+        for (Experience experience : experienceInfo) {/// this is where you need to check and fix
             System.out.println("Work Experience: ");
             experience.printText2(); // check this experience1 issue
         }
 
         System.out.println();
-        for(Skills skill : skills1){
-            System.out.println("Applicable Skills: ");
+        for(Skills skill : skillsInfo){
+            System.out.println("Applicable Skill: ");
             skill.printText3();
                 }
 

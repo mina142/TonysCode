@@ -37,6 +37,7 @@ public class Education {
         System.out.println(getDegreeType() + ", " + getMajor() );
 
         System.out.println(getUniversityName() + ", " + getGradYear());
+        System.out.println();
     }
     //method to display this text
 }

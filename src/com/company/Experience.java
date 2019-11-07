@@ -44,6 +44,7 @@ public class Experience {
         System.out.println(getJobTitle());
         System.out.println("Duration: " + getStartDate() + " - " + getEndDate());
         System.out.println("Job Description: " + getJobDescription());
+        System.out.println();
 
     }
     //method to display this text

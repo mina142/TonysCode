@@ -30,6 +30,8 @@ public class Applicant {
     }
 
     public void printInfo(){
+        System.out.println("Thank you for your resume, we will let you know");
+        System.out.println("-----------------------------------------------");
         System.out.println(getName());
         System.out.println(getEmail());
     }
