@@ -1,17 +1,19 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Experience {
 
     private String company;
     private String jobTitle;
     private String startDate;
     private String endDate;
-    private String jobDescription;
+    private ArrayList<String> jobDescription;
 
     public Experience() {
     }
 
-    public Experience(String company, String jobTitle, String startDate, String endDate, String jobDescription) {
+    public Experience(String company, String jobTitle, String startDate, String endDate, ArrayList<String> jobDescription) {
         this.company = company;
         this.jobTitle = jobTitle;
         this.startDate = startDate;
@@ -35,15 +37,22 @@ public class Experience {
 
     public void setEndDate(String endDate) { this.endDate = endDate; }
 
-    public String getJobDescription() { return jobDescription; }
+    public ArrayList<String> getJobDescription() {
+        return jobDescription;
+    }
 
-    public void setJobDescription(String jobDescription) { this.jobDescription = jobDescription; }
+    public void setJobDescription(ArrayList<String> jobDescription) {
+        this.jobDescription = jobDescription;
+    }
 
     public void printText2(){
         System.out.println(getCompany());
         System.out.println(getJobTitle());
         System.out.println("Duration: " + getStartDate() + " - " + getEndDate());
-        System.out.println("Job Description: " + getJobDescription());
+        for (String oneDescription : jobDescription) {
+            System.out.println("Job Description: " + oneDescription);
+        }
+        //        System.out.println("Job Description: " + getJobDescription());
         System.out.println();
 
     }

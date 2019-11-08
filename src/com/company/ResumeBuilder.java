@@ -22,7 +22,7 @@ public class ResumeBuilder {
         String jobTitle;
         String startDate;
         String endDate;
-        String jobDescription;
+        //String jobDescription;
 
         String skillName;
         String skillRating;
@@ -31,7 +31,7 @@ public class ResumeBuilder {
 
         ArrayList<Education> educationInfo = new ArrayList<>();
         ArrayList<Experience> experienceInfo = new ArrayList<>();
-        ArrayList<Skills> skillsInfo = new ArrayList(); // check with line 103
+        ArrayList<Skills> skillsInfo = new ArrayList<>(); // check with line 103
 
         Applicant applicant = new Applicant();
         System.out.println("Welcome to our online application, please fill out the following information to be considered.");
@@ -74,6 +74,8 @@ public class ResumeBuilder {
 
         while (true) {
             Experience experience = new Experience();
+            ArrayList<String> jobDescriptions = new ArrayList<>();     // moved here to exist PER JOB only!
+
             System.out.println("Please enter your prior work experience");
             System.out.println("Company name: ");
             company = key.nextLine();
@@ -91,10 +93,25 @@ public class ResumeBuilder {
             endDate = key.nextLine();
             experience.setEndDate(endDate);
 
-            System.out.println("Job Description: ");
-            jobDescription = key.nextLine();
-            experience.setJobDescription(jobDescription);
+            System.out.println("Enter one or more descriptions:");
+            while(true){
+                System.out.println("Job Description: ");
+                //jobDescription = key.nextLine();
+                //experience.setJobDescription(jobDescription);
+                String oneDescription = key.nextLine();
+                jobDescriptions.add(oneDescription);
 
+
+                System.out.println("Before we move on, do you want to add any more descriptions for this job?");
+                System.out.println("Please type Yes or No");
+
+                input = key.nextLine();
+                if (input.equalsIgnoreCase("no")) {
+                    break;
+                }
+            } // end description while
+
+            experience.setJobDescription(jobDescriptions);
             experienceInfo.add(experience);
 
             System.out.println("Before we move on, do you want to add any more prior work experience?");
